@@ -11,12 +11,13 @@
 }
 body {
     font-family: 'Helvetica', sans-serif;
+    background-color: rgb(245, 237, 237);
 }
 
 /* ============================================= */
 /*              Forms                            */
 /* ============================================= */
-input[type="text"] {
+input[type="search"] {
     padding: 10px 20px;
     margin: 2em auto;
     display: block;
@@ -24,13 +25,18 @@ input[type="text"] {
     border-radius: 5px;
     border: 2px solid lightgrey;
     max-width: 400px;
+    transition: 1s ease-in-out;
+    box-shadow: 2px 3px rgba(219, 206, 206, 0.6);
+    &:focus {
+        background-color: lightgoldenrodyellow;
+        outline: lightskyblue;
+    }
 }
+
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
 .grid {
-    width: 100%;
-    max-width: 900px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
     justify-content: center;
@@ -44,7 +50,12 @@ input[type="text"] {
 /* ============================================= */
 /*              Images                           */
 /* ============================================= */
-img {
-    border: 1px solid lightblue;
+a img {
+    border: 1px solid lightskyblue;
     border-radius: 0.25em;
+    box-shadow: 2px 3px rgba(219, 206, 206, 0.6);
+    transition: 0.5s ease-in-out;
+    &:hover {
+        transform: rotate(-2deg) scale(1.1);  
+    }
 }

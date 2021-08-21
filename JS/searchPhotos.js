@@ -1,7 +1,7 @@
 // NB I got a lot of help on this from the slack Office Hours and
 // https://www.w3schools.com/howto/howto_js_filter_lists.asp
+//https://www.geeksforgeeks.org/search-bar-using-html-css-and-javascript/
 
-let search = document.getElementById('search').addEventListener('keyup', searchCap);
 function searchCap() {
     let inputSearch = document.getElementById('search');
     let search = inputSearch.value.toLowerCase();
@@ -13,7 +13,7 @@ function searchCap() {
             tag[i].style.display = "none";
         }
         else {
-            tag[i].style.display = "flex"
+            tag[i].style.display = "flex";
         }       
     }
 } 

@@ -1,25 +1,20 @@
-const search = document.querySelector('#search');
-const caption = document.getAttribute('data-caption');
-const searchPhoto = event => {
-    search.addEventListener('keyup', searchPhoto);
-    const searchTerm = event.target.value.toLowerCase();
+// NB I got a lot of help on this from the slack Office Hours and
+// https://www.w3schools.com/howto/howto_js_filter_lists.asp
+
+let search = document.getElementById('search').addEventListener('keyup', searchCap);
+function searchCap() {
+    let inputSearch = document.getElementById('search');
+    let search = inputSearch.value.toLowerCase();
+    let tag = document.getElementsByTagName('a');
     
-}
+    for (i = 0; i < tag.length; i++) {
+        let dataCap = tag[i].getAttribute('data-caption').toLowerCase();
+        if (!dataCap.includes(search)) {
+            tag[i].style.display = "none";
+        }
+        else {
+            tag[i].style.display = "flex"
+        }       
+    }
+} 
 
-
-
-// function searchPhotos() {
-//     let input = document.getElementById('searchbar').value;
-//     input = input.toLowerCase();
-//     let caption = getElementsByClassName("photo");
-//     caption = getAttribute('data-caption');
-//     caption = caption.toLowerCase();
-
-//     for (i = 0; i < caption.length; i++) {
-//         if (!caption[i].innerHTML.toLowerCase().include(input)) {
-//             caption[i].style.display= "none";
-//         }  else {
-//             caption[i].style.display = "data-caption";
-//         }
-//     }
-// }

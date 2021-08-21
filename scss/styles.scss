@@ -1,61 +1,17 @@
 
-@import 'normalize';
-@import '_baguetteBox.min';
-/* ============================================= */
-/*              Base styles                      */
-/* ============================================= */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body {
-    font-family: 'Helvetica', sans-serif;
-    background-color: rgb(245, 237, 237);
-}
 
-/* ============================================= */
-/*              Forms                            */
-/* ============================================= */
-input[type="search"] {
-    padding: 10px 20px;
-    margin: 2em auto;
-    display: block;
-    width: 50%;
-    border-radius: 5px;
-    border: 2px solid lightgrey;
-    max-width: 400px;
-    transition: 1s ease-in-out;
-    box-shadow: 2px 3px rgba(219, 206, 206, 0.6);
-    &:focus {
-        background-color: lightgoldenrodyellow;
-        outline: lightskyblue;
-    }
-}
+// ======================================
+//  Partial Imports
+// ======================================
+// Utilities
+@import 'utilities/index';
 
-/* ============================================= */
-/*              Grid System                      */
-/* ============================================= */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
-    justify-content: center;
-    grid-gap: 1.25em;
-}
-.container {
-    margin: 0 auto;
-    max-width: 900px;
-    width: 100%;
-}
-/* ============================================= */
-/*              Images                           */
-/* ============================================= */
-a img {
-    border: 1px solid lightskyblue;
-    border-radius: 0.25em;
-    box-shadow: 2px 3px rgba(219, 206, 206, 0.6);
-    transition: 0.5s ease-in-out;
-    &:hover {
-        transform: rotate(-2deg) scale(1.1);  
-    }
-}
+// Base Styles
+@import 'base/index';
+
+// Component Styles
+@import 'components/index';
+
+
+
+

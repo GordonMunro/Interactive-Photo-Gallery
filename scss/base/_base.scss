@@ -1,0 +1,17 @@
+/* ============================================= */
+/*              Base styles                      */
+/* ============================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: rgb(245, 237, 237);
+}
+h1 {
+    text-align: center;
+    color: lightslategray;
+    text-shadow: 2px 3px $color-shadow;
+}

@@ -1,0 +1,14 @@
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+    justify-content: center;
+    grid-gap: 1.25em;
+}
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
